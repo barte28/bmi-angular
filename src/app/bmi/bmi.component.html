@@ -3,17 +3,33 @@
 </div>
 
     <div class="row">
-        <div class="col">
+        <div class="col-6 bg-info">
+            <label class="form-label">
+                Waga [kg]
+                <input type="number" placeholder=" " class="form-control" [(ngModel)] ="waga">
+            </label><br>
 
+              <label class="form-label">
+                Wzrost [m] 
+                <input type="number" placeholder=" " class="form-control" [(ngModel)] ="wzrost">
+              </label>
         </div>
-        <div class="col"></div>
-        <div class="col"></div>
+
+        <div class="col-3">
+            <button (click)="oblicz()" class="btn btn-success" >oblicz</button>
+        </div>
+
+        <div class="col-3 bg-success-subtle">
+            <img src="bmi_wzor.png" width="200px">
+            <p >Twoja waga: {{waga}}kg</p>
+            <p >Twój wzrost: {{wzrost}}m</p>
+            <p>Twoje Bmi: {{bmi}}</p>
+        </div>
     </div>
 
 
-    <button class="btn btn-success">oblicz</button>
+    
 
-Waga <input type="number"> kg <br>
-Wzrost <input type="number"> m
+
 
 
